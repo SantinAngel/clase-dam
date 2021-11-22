@@ -12,7 +12,14 @@ public class Alumno {
      */
     public Alumno(String nombreCompleto, String numeroMatriculaAlumno, int edadAlumno) {
         nombre = nombreCompleto;
+        if (nombreCompleto.length()<3) {
+            System.out.println("Error:Nombre menor de tres caracteres");
+    
+        }
         numeroMatricula = numeroMatriculaAlumno;
+        if (numeroMatricula.length()<4) {
+            System.out.println("Error:Numero menor de cuatro caracteres");
+        }
         edad = edadAlumno;
     }
 
@@ -45,3 +52,25 @@ public class Alumno {
         return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
