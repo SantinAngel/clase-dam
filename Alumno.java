@@ -14,7 +14,6 @@ public class Alumno {
         nombre = nombreCompleto;
         if (nombreCompleto.length()<3) {
             System.out.println("Error:Nombre menor de tres caracteres");
-    
         }
         numeroMatricula = numeroMatriculaAlumno;
         if (numeroMatricula.length()<4) {
@@ -49,7 +48,21 @@ public class Alumno {
      * en su cuenta de Github en formato de 7 caracateres
      */
     public String getNombreUsuarioGithub() {
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        String nombreDefinitivo="";
+        String numeroDeMatriculaDefinitivo="";
+        if (nombreDefinitivo.length()<3){
+            nombreDefinitivo = nombre.substring(0, nombre.length());  
+        }
+        if (nombreDefinitivo.length()>=3) {
+            nombreDefinitivo=nombre.substring(0,3);
+        }
+        if (numeroDeMatriculaDefinitivo.length()<4) {
+            numeroDeMatriculaDefinitivo=numeroMatricula.substring(0,numeroMatricula.length());
+            }
+        if (numeroDeMatriculaDefinitivo.length()>=4) {
+            numeroDeMatriculaDefinitivo=numeroMatricula.substring(0,4);
+        }
+        return nombreDefinitivo + numeroDeMatriculaDefinitivo;
     }
 }
 
